@@ -13,7 +13,7 @@ class BootstrapNavbar extends React.Component{
         const normalUser = ['admin', 'supervisor','employee'];    
         
         const showReview = primaryUser.includes(this.props.role) && 'Review' !== this.props.current;
-        const showUser = superUser.includes(this.props.role) && 'User' !== this.props.current;
+        const showUser = superUser.includes(this.props.role) && 'Users Management' !== this.props.current;
         const showReport = normalUser.includes(this.props.role) && 'Client Report' !== this.props.current;
         const showSearchBar = normalUser.includes(this.props.role);
         console.log(showReview);

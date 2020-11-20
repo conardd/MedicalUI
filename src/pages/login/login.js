@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {InputGroup , FormControl, Button} from 'react-bootstrap';
-import axios from 'axios';
+//import axios from 'axios';
 
 class Login extends React.Component{
     constructor(props){
@@ -24,11 +24,12 @@ class Login extends React.Component{
         //after login user role will return to redirect to differnet page
         //redux will be used to update user state in store
         //redirect page will be based on user's role
-        this.setState({role: this.state.userName});
-        
-        switch(this.state.role){
+        //alert('sss');        
+        //this.setState({role:this.state.userName}, ()=>{console.log(this.state.role);});
+        console.log(this.state);
+        switch(this.state.userName){
         case 'admin':
-            this.props.history.push('/user');
+            this.props.history.push('/usersManagement');
             break;
         case 'employee':
             this.props.history.push('/landing');           
@@ -36,8 +37,8 @@ class Login extends React.Component{
         case 'supervisor':
             this.props.history.push('/report');
             break;   
-        case 'user':
-            this.props.history.push('/userreport');
+        case 'customer':
+            this.props.history.push('/customerReports');
             break; 
         case 'new':
             this.props.history.push('/register');
@@ -50,7 +51,7 @@ class Login extends React.Component{
         
     }    
     handlechange = (e) => {
-        this.setState({[e.target.name]: e.target.value});
+        this.setState({[e.target.name]: e.target.value}, ()=>{console.log(this.state);});
     }
     render(){
         return(
@@ -81,7 +82,7 @@ class Login extends React.Component{
                 <Button variant="secondary" 
                         onClick={this.handleSubmit} 
                         className='floatRight'>Login</Button>
-                        <br/>
+                        
                 <Button variant="link"
                         onClick={this.newUser} 
                         className='floatRight'>New User?</Button>
