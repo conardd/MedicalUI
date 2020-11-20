@@ -68,7 +68,7 @@ class Detail extends React.Component{
                
                     <Button variant="secondary" 
                             onClick={this.handleAdd} 
-                            className='floatRight space'>Add</Button>  
+                            className='floatRight space'>Save</Button>  
                     <Button variant="secondary" 
                             onClick={this.handleAdd} 
                             className='floatRight space'>Cancel</Button>  

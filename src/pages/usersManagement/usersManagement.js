@@ -20,7 +20,7 @@ class UsersManagement extends React.Component{
                              user={this.state.role} 
                              show={this.state.role}
                              current='Users Management' />               
-                <h1>Users Management page</h1>
+                <h1>Admin Management page</h1>
             </div>
         )
 

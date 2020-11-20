@@ -74,7 +74,8 @@ class Login extends React.Component{
                     </InputGroup.Prepend>
                     <FormControl
                         name='password'
-                        placeholder="Password"                        
+                        placeholder="Password"  
+                        type='password'                      
                         aria-describedby="basic-addon1"
                         onChange={this.handlechange}
                     />

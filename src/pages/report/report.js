@@ -5,7 +5,7 @@ import BootstrapNavbar from '../../shared/navBar';
 class Report extends React.Component{
     constructor(props){
         super(props);
-        this.state ={role:'admin'};
+        this.state ={role:'supervisor'};
     }
     render(){
         return(
