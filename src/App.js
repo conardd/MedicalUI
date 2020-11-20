@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import './App.css';
 
 import Detail from './pages/detail/detail';
@@ -15,14 +15,17 @@ function App() {
     <div className="App">
       <header className="App-header">        
         <Router>
-        <Route path='/login' component={Login}/>
+        <Route path='/login' component={Login}/>                     
           <Route path='/report' component={Report}/>
           <Route path='/landing' component={Landing}/>
           <Route path='/usersManagement' component={UsersManagement}/>
           <Route path='/register' component={Register}/>
           <Route path='/detail' component={Detail}/>
-          <Route path='/customerReports' component={CustomerReports}/>          
-        </Router> 
+          <Route path='/CustomerReports' component={CustomerReports}/>     
+          <Redirect from="/" to="/login" exact /> 
+          
+        
+        </Router>
       </header>
     </div>
   );

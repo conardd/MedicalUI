@@ -5,9 +5,9 @@ import {Tabs, Table, Button } from 'react-bootstrap';
 class CustomerReports extends React.Component{
     constructor(props){
         super(props);
-        const samples = [{testitem:'test1',value:1.5,norminal:'1-5',comment:'no comment'},
-        {testitem:'test2',value:0.9,norminal:'1-5',comment:'no comment'},
-        {testitem:'test3',value:1.6,norminal:'1-5',comment:'no comment'}];
+        const samples = [{testitem:'test1',date:'1-2-2019',dr:'Tim',comment:'normal'},
+        {testitem:'test2',date:'10-9-2018',dr:'1-5',comment:'normal'},
+        {testitem:'test3',date:'6-3-2020',dr:'1-5',comment:'normal'}];
         this.state = {data: samples, role:'suctomer'};
 
     }
@@ -19,8 +19,8 @@ class CustomerReports extends React.Component{
                 <thead>
                     <tr>                        
                         <th>Test Item</th>
-                        <th>Result</th>
-                        <th>Standard</th>
+                        <th>Date</th>
+                        <th>Dr.</th>
                         <th>Comment</th>
                         <th>#</th>
                     </tr>
@@ -29,8 +29,8 @@ class CustomerReports extends React.Component{
                     {this.state.data.map((cus)=>(
                         <tr>                        
                         <td>{cus.testitem}</td>
-                        <td>{cus.value}</td>
-                        <td>{cus.norminal}</td>
+                        <td>{cus.date}</td>
+                        <td>{cus.dr}</td>
                         <td>{cus.comment}</td> 
                         <Button variant="link" onClick={this.gotodetail}><td>Test Detail</td> </Button>                   
                     </tr>
