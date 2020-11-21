@@ -15,18 +15,14 @@ class Login extends React.Component{
     newUser = () =>{
         this.props.history.push('/register');
     }
-    handleSubmit = (e) => {              
-        // axios.post('/login', {
-        //     userName: this.state.userName,
-        //     lastName: this.state.password
-        //   });  
+    handleSubmit = (e) => {                      
 
         //after login user role will return to redirect to differnet page
         //redux will be used to update user state in store
         //redirect page will be based on user's role
         //alert('sss');        
         //this.setState({role:this.state.userName}, ()=>{console.log(this.state.role);});
-        console.log(this.state);
+        //console.log(this.state);
         switch(this.state.userName){
         case 'admin':
             this.props.history.push('/usersManagement');
